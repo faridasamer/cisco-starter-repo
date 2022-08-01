@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import * as React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Banner /> 
+    <Card/>
+    </>
+  );
+}
+
+function Banner(){
+  return(
+    <div class="container banner">
+      <div class="jumbotron">
+      <h1>Sextant</h1>      
+      <p>Display your public IP address</p>
+      </div>    
+    </div>
+  );
+    
+}
+
+function Card(){
+  return(
+    <div class="cardContainer">
+    <div class="card">
+      <div class="card-body">
+      <h5 class="card-title">Your IP address is:</h5>
+      <p class="card-text">100.100.100.100</p>
+      </div>
+    </div>
     </div>
   );
 }
